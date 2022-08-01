@@ -14,8 +14,12 @@ steps:
     npm install
   displayName: 'npm install'
 
-- task: owaspzap@1
-
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'snyk-sumir'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: false
 - task: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
