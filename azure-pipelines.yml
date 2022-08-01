@@ -16,7 +16,6 @@ steps:
 
 - task: owaspzap@1
   inputs:
-    aggressivemode: true
 - task: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
